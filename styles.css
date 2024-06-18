@@ -1,0 +1,185 @@
+/* Estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('imagens/ceu_estrelado.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Estilo do cabeçalho e rodapé */
+header, footer {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilo das seções principais */
+section {
+    padding: 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor legibilidade */
+}
+
+/* Estilo da galeria */
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gallery .slides {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.gallery .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+button.prev, button.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+.description {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+/* Estilo do formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 0.5rem 0;
+}
+
+form input, form textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+}
+
+form button {
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo do rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery .slides {
+        width: 100%;
+    }
+}
+
+.description.active {
+    display: block;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor do fundo do retângulo */
+    padding: 20px; /* Espaçamento interno dentro do retângulo */
+    margin: 0 auto; /* Centraliza o retângulo horizontalmente */
+    max-width: 600px; /* Largura máxima do retângulo */
+    border-radius: 10px; /* Borda arredondada do retângulo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o retângulo */
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container label {
+    color: #fff; /* Cor do texto dos labels */
+    margin: 0.5rem 0;
+}
+
+.form-container input, .form-container textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 100%; /* Preenchimento total dentro do retângulo */
+    max-width: 500px; /* Largura máxima dos inputs */
+    background-color: #333; /* Cor de fundo dos inputs */
+    border: none;
+    color: #fff; /* Cor do texto dentro dos inputs */
+}
+
+.form-container button {
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
